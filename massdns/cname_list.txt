@@ -1,0 +1,8 @@
+url2659.theforage.com. CNAME sendgrid.net.
+fxs-prod.theforage.com. CNAME ap-southeast-2.galaxy-ingress.meteor.com.
+cdn.theforage.com. CNAME d3suvwoybdmzzl.cloudfront.net.
+tshirtvoting.theforage.com. CNAME wishpond.com.
+cdn-assets.theforage.com. CNAME d3am2qwxhrbd8v.cloudfront.net.
+employers.theforage.com. CNAME proxy-ssl.webflow.com.
+info.theforage.com. CNAME 8699617.group17.sites.hubspot.net.
+fxs-dev.theforage.com. CNAME ap-southeast-2.galaxy-ingress.meteor.com.

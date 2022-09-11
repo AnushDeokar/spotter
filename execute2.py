@@ -1,5 +1,7 @@
 import sys
-def read_domain(fname, domain_name):
+import time
+
+def read_domain(scope):
     print("""
     
     _____  ______  ______  _______  _______  _____   _____
@@ -12,18 +14,29 @@ def read_domain(fname, domain_name):
     """
     
     )
-    f = open(fname, "r")
-    Lines = f.readlines()
-    file_path = 'subdomains.txt'
-    sys.stdout = open(file_path, "w")
-    domain_array = []
-    for line in Lines:
-        temp = line[:-1]
-        domain_array.append(temp+"."+domain_name)
-    for i in domain_array:
-        print(i)
+    #f = open("commonspeak2-wordlists/subdomains/subdomains.txt", "r")
+    wordlist = open('commonspeak2-wordlists/subdomains/subdomains.txt').read().split('\n')
+
+    file1 = open("subdomains.txt", "a")  # append mode
+    
+    for word in wordlist:
+        if not word.strip(): 
+            continue
+        file1.write('{}.{}\n'.format(word.strip(), scope))
+        #print('{}.{}\n'.format(word.strip(), scope))
+    file1.close()
+
+
+read_domain(sys.argv[1])
 
 
 
+print("""
 
-read_domain("/home/sonu/Desktop/Spotter/commonspeak2-wordlists/subdomains/subdomains.txt",  sys.argv[1])
+
+All Subdomains have been collected.
+
+
+""")
+
+time.sleep(2)
